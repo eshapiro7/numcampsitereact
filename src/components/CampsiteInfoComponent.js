@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors} from 'react-redux-form';
 import ModalBody from 'reactstrap/lib/ModalBody';
 import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 const required = val => val && val.length;
 const maxLength = len => val => !val || (val.length <= len);
@@ -90,7 +91,7 @@ class CommentForm extends Component {
 function RenderDirectoryItem({campsite, onClick}) {
     return (
         <Card onClick={() => onClick(campsite.id)}>
-            <CardImg width="100%" src={campsite.image} alt={campsite.name} />
+            <CardImg width="100%" src={baseUrl + campsite.image} alt={campsite.name} />
             <CardImgOverlay>
                 <CardTitle>{campsite.name}</CardTitle>
             </CardImgOverlay>
