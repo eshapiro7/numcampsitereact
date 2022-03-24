@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, CardBody, CardText, 
-    Breadcrumb, BreadcrumbItem, Button, Modal, ModalHeader, FormGroup, Label, Input } from 'reactstrap';
+    Breadcrumb, BreadcrumbItem, Button, Modal, ModalHeader, Label } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors} from 'react-redux-form';
 import ModalBody from 'reactstrap/lib/ModalBody';
@@ -41,17 +41,17 @@ class CommentForm extends Component {
                             <LocalForm onSubmit={(values)=>this.handleSubmit(values)}>
                                 <div className='form-group'>
                                     <Label htmlFor="rating">Rating</Label>
-                                        <Control.select model=".rating" name="rating" className="form-control" id="rating">
+                                        <Control.Select model=".rating" name="rating" className="form-control" id="rating">
                                             <option>1</option> 
                                             <option>2</option> 
                                             <option>3</option> 
                                             <option>4</option> 
                                             <option>5</option> 
-                                        </Control.select>
+                                        </Control.Select>
                                 </div>
                                 <div className="form-group">
                                     <Label htmlFor="author">Your Name</Label>
-                                    <Control.text model=".author" name="author" className="form-control" id="author" placeholder='Your Name'
+                                    <Control.Text model=".author" name="author" className="form-control" id="author" placeholder='Your Name'
                                     
                                     validators={{
                                         required,
@@ -74,7 +74,7 @@ class CommentForm extends Component {
                                 </div>
                                 <div className="form-group">
                                     <Label htmlFor="comment">Comment</Label>
-                                        <Control.textarea model=".text" name="text" id="text"rows="6" className='form-control' /> 
+                                        <Control.Textarea model=".text" name="text" id="text"rows="6" className='form-control' /> 
                                 </div>
                                 <div className="form-group">
                                     <Button type="submit" color="primary">
