@@ -3,6 +3,7 @@ import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
     Button, Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import 'animate.css';
 
 class Header extends Component {
 
@@ -47,7 +48,7 @@ class Header extends Component {
                         <div className="row">
                             <div className="col">
                                 <h1>NuCamp</h1>
-                                <h2>a better way to camp</h2>
+                                <h2 className="animate__animated animate__fadeIn">a better way to camp</h2>
                             </div>
                         </div>
                     </div>
@@ -81,7 +82,7 @@ class Header extends Component {
                                 </NavItem>
                             </Nav>
                             <span className='navbar-text ml-auto'>
-                                <Button outline onClick={this.toggleModal}>
+                                <Button outline onClick={this.toggleModal} className='animate__animated animate__tada'>
                                     <i className='fa fa-sign-in fa-lg' />Login
                                 </Button>
                             </span>

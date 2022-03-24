@@ -67,3 +67,9 @@ h2 {
   opacity: 0;
   transition: 300ms ease-in;
 }
+
+.animate__animated.animate__rollin,
+.animate__animated.animate__tada {
+  --animate-duration: 2s;
+  --animate-delay: 4s;
+}
