@@ -35,10 +35,11 @@ function PartnerList (props) {
         return <Loading />;
     }
     if (props.partners.errMess) {
-        return 
+        return (
         <div className='col'>
             <h4>{props.partners.errMess}</h4>
-        </div>;
+        </div>
+        );
        
     }
 
